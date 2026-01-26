@@ -1,0 +1,109 @@
+:root {
+    --spacingtop: 2;
+    --spacingbottom: 2;
+}
+
+// Definition vertikale Abstände
+.mtop0 { --spacingtop: 0; }
+.mtop10 { --spacingtop: 10; }
+.mtop20 { --spacingtop: 20; }
+.mtop30 { --spacingtop: 30; }
+.mtop40 { --spacingtop: 40; }
+.mtop50 { --spacingtop: 50; }
+.mtop60 { --spacingtop: 60; }
+.mtop70 { --spacingtop: 70; }
+.mtop80 { --spacingtop: 80; }
+.mtop90 { --spacingtop: 90; }
+.mtop100 { --spacingtop: 100; }
+.mtop150 { --spacingtop: 150; }
+.mtop200 { --spacingtop: 200; }
+.mtop300 { --spacingtop: 300; }
+
+.mbottom0 { --spacingbottom: 0; }
+.mbottom10 { --spacingbottom: 10; }
+.mbottom20 { --spacingbottom: 20; }
+.mbottom30 { --spacingbottom: 30; }
+.mbottom40 { --spacingbottom: 40; }
+.mbottom50 { --spacingbottom: 50; }
+.mbottom60 { --spacingbottom: 60; }
+.mbottom70 { --spacingbottom: 70; }
+.mbottom80 { --spacingbottom: 80; }
+.mbottom90 { --spacingbottom: 90; }
+.mbottom100 { --spacingbottom: 100; }
+.mbottom150 { --spacingbottom: 150; }
+.mbottom200 { --spacingbottom: 200; }
+.mbottom300 { --spacingbottom: 300; }
+
+// Definition innere vertikale Abstände
+.ptop0 { --spacingtop: 0; }
+.ptop10 { --spacingtop: 10; }
+.ptop20 { --spacingtop: 20; }
+.ptop30 { --spacingtop: 30; }
+.ptop40 { --spacingtop: 40; }
+.ptop50 { --spacingtop: 50; }
+.ptop60 { --spacingtop: 60; }
+.ptop70 { --spacingtop: 70; }
+.ptop80 { --spacingtop: 80; }
+.ptop90 { --spacingtop: 90; }
+.ptop100 { --spacingtop: 100; }
+.ptop150 { --spacingtop: 150; }
+.ptop200 { --spacingtop: 200; }
+.ptop300 { --spacingtop: 300; }
+
+.pbottom0 { --spacingbottom: 0; }
+.pbottom10 { --spacingbottom: 10; }
+.pbottom20 { --spacingbottom: 20; }
+.pbottom30 { --spacingbottom: 30; }
+.pbottom40 { --spacingbottom: 40; }
+.pbottom50 { --spacingbottom: 50; }
+.pbottom60 { --spacingbottom: 60; }
+.pbottom70 { --spacingbottom: 70; }
+.pbottom80 { --spacingbottom: 80; }
+.pbottom90 { --spacingbottom: 90; }
+.pbottom100 { --spacingbottom: 100; }
+.pbottom150 { --spacingbottom: 150; }
+.pbottom200 { --spacingbottom: 200; }
+.pbottom300 { --spacingbottom: 300; }
+
+// @media screen and (min-width: #{$bp-m}px) {
+    [class*="mtop"] {
+        margin-top: calc(var(--spacingtop) * 1px);
+    }
+    
+    [class*="mbottom"] {
+        margin-bottom: calc(var(--spacingbottom) * 1px);
+    }
+
+    [class*="mtop"].ppercent {
+        margin-top: calc(var(--spacingtop) * 0.1%);
+    }
+    
+    [class*="mbottom"].ppercent {
+        margin-bottom: calc(var(--spacingbottom) * 0.1%);
+    }
+    
+    [class*="ptop"],
+    .mod_article[class*="ptop"] {
+        padding-top: calc(var(--spacingtop) * 1px);
+    }
+    
+    [class*="pbottom"],
+    .mod_article[class*="pbottom"] {
+        padding-bottom: calc(var(--spacingbottom) * 1px);
+    }
+
+    [class*="ptop"].ppercent,
+    .mod_article[class*="ptop"].ppercent {
+        padding-top: calc(var(--spacingtop) * 0.1%);
+    }
+
+    [class*="pbottom"].ppercent,
+    .mod_article[class*="pbottom"].ppercent {
+        padding-bottom: calc(var(--spacingbottom) * 0.1%);
+    }
+// }
+
+.innerpadding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

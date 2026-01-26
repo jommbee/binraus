@@ -1,0 +1,91 @@
+html {
+	background: url('/files/theme/img/denim.webp') repeat;
+}
+
+body {
+	margin: 0 auto;
+}
+// Wrapper mit Maximalbreite (Bei Contao Layouts mit .custom außerhalb muss die .custom Klasse ergänzt werden.)
+.wrapper {
+	// max-width: 1920px;
+	min-height: 100dvh;
+}
+
+.wrap {
+	max-width: $bp-wrap;
+	margin: 0 auto;
+
+	@media screen and (max-width: #{$bp-wrapbox}px) {
+		padding: 0 var(--space-default) 0 var(--space-default);
+	}
+}
+
+.container {
+	position: relative;
+}
+
+
+// .aside {
+// 	&.left {}
+// 	&.right {}
+// }
+
+// Contao spezific
+/*
+.inside {
+
+} */
+
+// Layouts Spalten
+// .aside-left .container {
+// 	--layout-column-gap: 5rem;
+
+// 	@extend .wrap;
+// 	@media screen and (min-width: #{$bp-l}px) {
+// 		display: grid;
+// 	}
+// 	grid-template-columns: 25% calc(75% - var(--layout-column-gap));
+// 	grid-template-areas: 'aside-left main';
+// 	grid-column-gap:  var(--layout-column-gap);
+
+// 	.left {
+// 		grid-area: aside-left;
+// 	}
+// }
+
+
+// .aside-right .container {
+// 	--layout-column-gap: 5rem;
+
+// 	@extend .wrap;
+// 	@media screen and (min-width: #{$bp-l}px) {
+// 		display: grid;
+// 	}
+// 	grid-template-columns: calc(75% - var(--layout-column-gap)) 25% ;
+// 	grid-template-areas: 'main aside-right';
+// 	grid-column-gap:  var(--layout-column-gap);
+
+// 	.right {
+// 		grid-area: aside-right;
+// 	}
+// }
+
+// .left-aside-right .container {
+// 	--layout-column-gap: 3rem;
+
+// 	@extend .wrap;
+// 	@media screen and (min-width: #{$bp-l}px) {
+// 		display: grid;
+// 	}
+// 	grid-template-columns: 25% calc(50% - var(--layout-column-gap)* 2) 25% ;
+// 	grid-template-areas: 'aside-left main aside-right';
+// 	grid-column-gap:  var(--layout-column-gap);
+
+// 	.left {
+// 		grid-area: aside-left;
+// 	}
+
+// 	.right {
+// 		grid-area: aside-right;
+// 	}
+// }

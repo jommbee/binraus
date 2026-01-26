@@ -1,0 +1,41 @@
+:root {
+  --brand-color1-100: color-mix(in srgb, var(--brand-color1), white 80%);
+  --brand-color1-200: color-mix(in srgb, var(--brand-color1), white 60%);
+  --brand-color1-300: color-mix(in srgb, var(--brand-color1), white 40%);
+  --brand-color1-400: color-mix(in srgb, var(--brand-color1), white 20%);
+
+  --brand-color1-500:  var(--brand-color1);
+
+  --brand-color1-600: color-mix(in srgb, var(--brand-color1), black 20%);
+  --brand-color1-700: color-mix(in srgb, var(--brand-color1), black 40%);
+  --brand-color1-800: color-mix(in srgb, var(--brand-color1), black 60%);
+  --brand-color1-900: color-mix(in srgb, var(--brand-color1), black 80%);
+
+//------------------
+
+  --brand-color2-100: color-mix(in srgb, var(--brand-color2), white 80%);
+  --brand-color2-200: color-mix(in srgb, var(--brand-color2), white 60%);
+  --brand-color2-300: color-mix(in srgb, var(--brand-color2), white 40%);
+  --brand-color2-400: color-mix(in srgb, var(--brand-color2), white 20%);
+
+  --brand-color2-500:  var(--brand-color2);
+
+  --brand-color2-600: color-mix(in srgb, var(--brand-color2), black 20%);
+  --brand-color2-700: color-mix(in srgb, var(--brand-color2), black 40%);
+  --brand-color2-800: color-mix(in srgb, var(--brand-color2), black 60%);
+  --brand-color2-900: color-mix(in srgb, var(--brand-color2), black 80%);
+
+//------------------
+
+  --brand-color3-100: color-mix(in srgb, var(--brand-color3), white 80%);
+  --brand-color3-200: color-mix(in srgb, var(--brand-color3), white 60%);
+  --brand-color3-300: color-mix(in srgb, var(--brand-color3), white 40%);
+  --brand-color3-400: color-mix(in srgb, var(--brand-color3), white 20%);
+
+  --brand-color3-500:  var(--brand-color3);
+
+  --brand-color3-600: color-mix(in srgb, var(--brand-color3), black 20%);
+  --brand-color3-700: color-mix(in srgb, var(--brand-color3), black 40%);
+  --brand-color3-800: color-mix(in srgb, var(--brand-color3), black 60%);
+  --brand-color3-900: color-mix(in srgb, var(--brand-color3), black 80%);
+}

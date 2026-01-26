@@ -1,0 +1,44 @@
+html {
+	font-size: 100%;
+	font-family: var(--font-family-default);
+
+	@media screen and (min-width: #{$bp-m}px) {
+		font-size: 112.5%;
+	}
+
+	@media screen and (min-width: #{$bp-xl}px) {
+		font-size: 125%;
+	}
+}
+
+html,
+body {
+	font-family: var(--font-family-default);
+	font-weight: var(--fw-n);
+	line-height: 1.5;
+	color: var(--text-color);
+	overflow-x: hidden;
+}
+
+// Use smooth scrolling for anchor links—but not if the reduce motion accessibility preference is enabled!
+// https://gist.github.com/zachleat/a7393810acf7890e6bef6a34eaa7b78c
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+p {
+	color: var(--text-color);
+
+	&:not(:last-child) {
+		margin: 0 0 0.75em 0;
+	}
+}
+
+::-moz-selection,
+::selection {
+	background: var(--grau-500);
+	color: #fff;
+	text-shadow: none;
+}

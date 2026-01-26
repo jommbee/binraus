@@ -1,0 +1,4 @@
+Sitemap: https://www.domain.de/share/sitemap.xml
+User-agent: *
+Disallow: /bundles/
+Disallow: /system/

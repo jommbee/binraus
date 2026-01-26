@@ -1,0 +1,23 @@
+#footer {
+	--text-color: #fff;
+	--action: #fff;
+	background-color: var(--grau-800);
+	padding: var(--space-default);
+	color: var(--text-color);
+
+	@media screen and (min-width: #{$bp-m}px) {
+		padding: var(--space-large) var(--space-default);
+	}
+
+	@media screen and (min-width: #{$bp-xl}px) {
+		padding: var(--space-xlarge) var(--space-default);
+	}
+
+	@media screen and (min-width: #{$bp-wrapbox}px) {
+		padding: var(--space-xlarge) 0;
+	}
+
+	.inside {
+		@extend .wrap;
+	}
+}

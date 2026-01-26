@@ -1,0 +1,6 @@
+    mailer_transport: smtp
+    mailer_host: XXX
+    mailer_user: XXX
+    mailer_password: 'XXX'
+    mailer_port: 587 | 465
+    mailer_encryption: tls | ssl

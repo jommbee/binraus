@@ -1,0 +1,13 @@
+#header {
+	color: var(--grau-900);
+	padding: var(--space-small);
+	@extend .bg-light;
+
+	.inside {
+		@extend .wrap;
+	}
+
+	* {
+		margin: 0;
+	}
+}

@@ -1,0 +1,86 @@
+.content-accordion {
+	// Farben
+	--accordion-toggler-background: #d7d7d7;
+	--accordion-toggler-color: #000000;
+	--accordion-content-background: #ffffff;
+	// Farben action
+	--accordion-toggler-action-background: #252525;
+	--accordion-toggler-action-color: #ffffff;
+	--accordion-toggler-action-border-color: rgb(123, 123, 123);
+	// Rahmen / Border
+	--accordion-toggler-border-weight: 1px;
+	--accordion-toggler-border-style: solid;
+	--accordion-toggler-border-color: rgb(209, 209, 209);
+	--accordion-toggler-border-radius: 0;
+	//Text
+	--accordion-toggler-text-align: left;
+	// Innenabstände
+	--accordion-toggler-inner-spacing: 1rem;
+	--accordion-content-spacing: 1rem;
+	// Animation
+	--accordion-toggler-background-transition-time: .2s;
+}
+
+.content-accordion {
+	border-bottom: var(--accordion-toggler-border-weight) var(--accordion-toggler-border-style)  var(--accordion-toggler-border-color);
+}
+.handorgel__header{
+	display:block;
+    margin:0
+}
+.handorgel__header__button{
+	display:block;
+    width:100%;
+    padding:var(--accordion-toggler-inner-spacing);
+    margin:0;
+    border:0;
+    border-top:var(--accordion-toggler-border-weight) var(--accordion-toggler-border-style)  var(--accordion-toggler-border-color);
+    background-color:var(--accordion-toggler-background);
+    border-radius:var(--accordion-toggler-border-radius);
+    color:inherit;
+    cursor:pointer;
+    font-size:inherit;
+    text-align:var(--accordion-toggler-text-align);
+    transition:background-color var(--accordion-toggler-background-transition-time) ease;
+    user-select:none;
+}
+.handorgel__header__button::-moz-focus-inner{
+	border:0;
+}
+.handorgel__content{
+	display:none;
+    overflow:hidden;
+    height:0;
+    border-top:ar(--accordion-toggler-border-weight) var(--accordion-toggler-border-style)  var(--accordion-toggler-border-color);
+    background-color:var(--accordion-content-background);
+    transition:height .1s ease .1s;
+}
+.handorgel__content--open{
+	display:block;
+    transition:height .2s ease
+}
+.handorgel__content--opened{
+	overflow:visible
+}
+.handorgel__content__inner{
+	padding:var(--accordion-toggler-inner-spacing);
+    opacity:0;
+    transition:opacity .1s ease
+}
+.handorgel__content--opened .handorgel__content__inner{
+	opacity:1;
+    transition:opacity .3s ease
+}
+.handorgel .accordion{
+	display:none;
+    overflow:hidden;
+    height:0;
+    transition:height .2s ease
+}
+.handorgel .accordion.open{
+	display:block;
+    transition:height .2s ease
+}
+.handorgel .accordion.active{
+	overflow:visible
+}

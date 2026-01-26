@@ -1,0 +1,47 @@
+// Convert px to em
+@function pxtoem($target, $context) {
+	@return ($target/$context)+0em;
+}
+
+// Convert em to px
+@function emtopx($target, $context) {
+	@return ($target*$context)+0px;
+}
+
+// Find color in palette map
+@function palette($palette, $tone: 'base') {
+	@return map-get(map-get($palettes, $palette), $tone);
+}
+
+@function calculateRem($size) {
+	$remSize: $size / var(--doc-font-size); // var(--doc-font-size) aus settings.scss
+	@return $remSize * 1rem;
+}
+
+// Strip units from values
+@function strip-unit($num) {
+@return $num / ($num * 0 + 1);
+}
+
+// Functions for px to em conversions
+// ------------------------------------------------------------
+
+@function emify($target, $context) {
+	 @if $target == 0 { @return 0 }
+	 @return $target / $context + 0em;
+}
+
+// Make px to ems using base-font-size 
+// echo as: font-size: em-font(#px);
+
+@function em-font($target, $context: var(--base-font-size)) {
+	 @return emify($target, $context);
+}
+
+
+// Make px to ems using base-line-height 
+// echo as: font-size: em-base(#px);
+
+@function em-base($target, $context: var(--base-line-height)) {
+	 @return emify($target, $context);
+}

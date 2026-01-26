@@ -1,0 +1,28 @@
+.glossy {
+    --glossy-background: rgba(84, 134, 69, 0.23);
+    --glossy-border-radius: 16px;
+    --glossy-box-shadow-horizontal: 0;
+    --glossy-box-shadow-vertical: 4px;
+    --glossy-box-shadow-blur-radius: 30px;
+    --glossy-box-shadow-color: rgba(0, 0, 0, 0.1);
+    --glossy-backdrop-filter: blur(.04rem);
+    --glossy-border: 1px solid rgba(84, 134, 69, 0.3);
+    --glossy-padding: 1rem;
+
+
+    background: var(--glossy-background);
+    border-radius: var(--glossy-border-radius);
+    box-shadow: var(--glossy-box-shadow-horizontal) 
+                var(--glossy-box-shadow-vertical) 
+                var(--glossy-box-shadow-blur-radius) 
+                var(--glossy-box-shadow-color);
+    backdrop-filter: var(--glossy-backdrop-filter);
+    border: var(--glossy-border);
+    padding: var(--glossy-padding);
+
+    &.content-image ,
+    &.content-headline{
+        white-space: nowrap;
+        display: table;
+    }    
+}

@@ -1,0 +1,66 @@
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	line-height: 1.2;
+	text-wrap: balance;
+
+	// removing text decoration from all headline links
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+:where(
+  [class^="content-"]:is(h2, h3, h4, h5, h6):first-of-type,
+  .ce_cp_column_start:is(h2, h3, h4, h5, h6):first-of-type
+) {
+  margin-top: 0;
+}
+
+h1,.h1 {
+	font-family: var(--font-family-display);
+	font-weight: var(--fw-sb);
+	color: var(--heading-color);
+	margin: 0 0 .5em 0;
+	font-size: clamp(calc(28 / var(--doc-font-size) * 1rem), calc(1.5rem + 1.5vw), calc(48 / var(--doc-font-size) * 1rem)); // 28px → 48px fluid scaling
+}
+
+h2,.h2 {
+	font-family: var(--font-family-display);
+	font-weight: var(--fw-n);
+	color: var(--secondary-heading-color);
+	margin: 0 0 .5em 0;
+	font-size: clamp(calc(22 / var(--doc-font-size) * 1rem), calc(1.2rem + 0.9vw), calc(36 / var(--doc-font-size) * 1rem)); // 22px → 36px fluid scaling
+}
+
+h3,.h3 {
+	font-family: var(--font-family-display);
+	font-weight: var(--fw-n);
+	color: var(--heading-color);
+	margin: 0 0 .5em 0;
+	font-size: clamp(calc(20 / var(--doc-font-size) * 1rem), calc(1.15rem + 0.5vw), calc(28 / var(--doc-font-size) * 1rem)); // 20px → 28px fluid scaling
+}
+
+h4,.h4 {
+	font-family: var(--font-family-display);
+	font-weight: var(--fw-b);
+	color: var(--heading-color);
+	margin: .75em 0 .5em 0;
+	font-size: clamp(calc(18 / var(--doc-font-size) * 1rem), calc(1.05rem + 0.4vw), calc(24 / var(--doc-font-size) * 1rem)); // 18px → 24px fluid scaling
+}
+
+h5,.h5 {
+	font-family: var(--font-family-display);
+	font-weight: var(--fw-b);
+	color: var(--secondary-heading-color);
+	margin: .75em 0 .5em 0;
+	font-size: clamp(calc(16 / var(--doc-font-size) * 1rem), calc(0.95rem + 0.3vw), calc(22 / var(--doc-font-size) * 1rem)); // 16px → 22px fluid scaling
+}
+
+h6,.h6 {
+	font-family: var(--font-family-display);
+	font-weight: var(--fw-b);
+	color: var(--secondary-heading-color);
+	margin: .75em 0 .5em 0;
+	font-size: calc(20 / var(--doc-font-size) * 1rem); // 20px relativ zur Basis-Schriftgröße
+}

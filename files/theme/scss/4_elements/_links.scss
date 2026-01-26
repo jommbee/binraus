@@ -1,0 +1,21 @@
+a {
+	color: var(--action);
+	text-decoration: underline;
+	transition: all .2s linear;
+
+	&:hover, 
+	&:focus {
+		color: var(--action-respond);
+	}
+}
+
+:focus-visible {outline: 1px dashed var(--grau-700); }
+
+a[href^="tel"] {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+a:has(img) {
+	display: block;
+}

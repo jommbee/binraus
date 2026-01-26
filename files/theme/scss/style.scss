@@ -1,0 +1,62 @@
+//*********************
+// Site Name: WEBSITE
+// Author: ecco marketing solutions GmbH
+// Stylesheet: Main Stylesheet
+//*********************
+
+// settings
+// @import "1_settings/dev";
+@import "1_settings/global";
+@import "1_settings/colors";
+@import "1_settings/colors-palettes";
+@import "1_settings/fonts";
+@import "1_settings/space";
+@import "1_settings/breakpoints";
+@import "1_settings/backgrounds";
+@import "1_settings/effects";
+
+// tools
+@import "2_tools/helpers";
+
+// generic
+@import "3_generic/normalize"; // statt reset
+// @import "3_generic/reset"; // statt normalize
+@import "3_generic/base";
+@import "3_generic/box-sizing";
+// @import "3_generic/spacings";
+
+// elements
+@import "4_elements/headings";
+@import "4_elements/images";
+@import "4_elements/links";
+@import "4_elements/lists";
+@import "4_elements/icons";
+
+// objects
+@import "5_objects/wrappers";
+@import "5_objects/header";
+@import "5_objects/footer";
+@import "5_objects/articles";
+// @import "5_objects/content-element-group";
+@import "5_objects/flexit";
+// @import "5_objects/grid_tweaks";
+
+// components
+@import "6_components/navigation";
+@import "6_components/content-elements";
+@import "6_components/buttons";
+@import "6_components/content-text";
+// @import "6_components/content-gallery";
+@import "6_components/video";
+// @import "6_components/mod_breadcrumb";
+@import "6_components/content-downloads";
+// @import "6_components/content-accordion";
+// @import "6_components/content-description-list";
+@import "6_components/ce_form";
+// @import "6_components/tables";
+// @import "6_components/embed";
+// @import "6_components/mod_search";
+// @import "6_components/pagination";
+
+// visuals
+// @import "7_visuals/glossy";

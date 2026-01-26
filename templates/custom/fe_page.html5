@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="<?= $this->language ?>"<?php if ($this->isRTL): ?> dir="rtl"<?php endif; ?> class="no-js">
+<head>
+
+	<?php $this->block('head'); ?>
+		<meta charset="<?php echo $this->charset; ?>">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title><?php echo $this->title; ?></title>
+		<base href="<?php echo $this->base; ?>">
+		<?php if ($this->canonical): ?>
+		<link rel="canonical" href="<?= $this->canonical ?>">
+		<?php endif; ?>
+		<?php $this->block('meta'); ?>
+			<meta name="robots" content="<?php echo $this->robots; ?>">
+			<meta name="description" content="<?php echo $this->description; ?>">
+			<meta name="keywords" content="<?php echo $this->keywords; ?>">
+			<meta name="referrer" content="same-origin">
+			<meta name="generator" content="Contao Open Source CMS">
+			<?php $this->endblock(); ?>
+
+		<?php echo $this->viewport; ?>
+		<?php echo $this->framework; ?>
+		<?php echo $this->stylesheets; ?>
+
+		<?php echo $this->mooScripts; ?>
+		<?php echo $this->head; ?>
+
+	<?php $this->endblock(); ?>
+	<script>
+		document.documentElement.className = document.documentElement.className.replace("no-js","js");
+	</script>
+</head>
+<body id="top" class="{{ua::class}}<?php if ($this->class) echo ' ' . $this->class; ?>"<?php if ($this->onload): ?> onload="<?php echo $this->onload; ?>"<?php endif; ?>>
+
+<?php $this->block('body'); ?>
+	<?php echo $this->sections('top'); ?>
+	<div class="wrapper">
+
+		<?php $this->block('header'); ?>
+			<?php if ($this->header): ?>
+				<header id="header" class="header">
+					<div class="inside">
+						<?php echo $this->header; ?>
+					</div>
+				</header>
+			<?php endif; ?>
+		<?php $this->endblock(); ?>
+
+		<?php echo $this->sections('before'); ?>
+
+		<?php $this->block('container'); ?>
+			<div id="container" class="container">
+
+				<?php $this->block('main'); ?>
+					<main>
+						<div class="inside">
+							<?php echo $this->main; ?>
+						</div>
+						<?php echo $this->sections('main'); ?>
+					</main>
+				<?php $this->endblock(); ?>
+
+				<?php $this->block('left'); ?>
+					<?php if ($this->left): ?>
+						<aside id="left" class="left">
+							<div class="inside">
+								<?php echo $this->left; ?>
+							</div>
+						</aside>
+					<?php endif; ?>
+				<?php $this->endblock(); ?>
+
+				<?php $this->block('right'); ?>
+					<?php if ($this->right): ?>
+						<aside id="right" class="right">
+							<div class="inside">
+								<?php echo $this->right; ?>
+							</div>
+						</aside>
+					<?php endif; ?>
+				<?php $this->endblock(); ?>
+
+			</div>
+		<?php $this->endblock(); ?>
+
+		<?php echo $this->sections('after'); ?>
+
+		<?php $this->block('footer'); ?>
+			<?php if ($this->footer): ?>
+				<footer id="footer" class="footer">
+					<div class="inside">
+						<?php echo $this->footer; ?>
+					</div>
+				</footer>
+			<?php endif; ?>
+		<?php $this->endblock(); ?>
+
+	</div>
+
+	<?php echo $this->sections('bottom'); ?>
+<?php $this->endblock(); ?>
+
+<?php echo $this->mootools; ?>
+<?= $this->jsonLdScripts ?>
+{{file::custom/svg-sprite.html5}}
+</body>
+</html>

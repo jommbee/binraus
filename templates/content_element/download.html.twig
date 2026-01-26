@@ -1,0 +1,35 @@
+{% extends "@Contao/content_element/download.html.twig" %}
+
+{#
+  ** Add changes to the base template here. **
+
+  Hint: Try adjusting blocks and attributes instead of
+  overwriting the whole template. This way your version
+  can remain compatible with future changes to the base
+  template as well as adjustments made by extensions.
+
+  Currently available blocks:
+    "picture_component", "image", "sources", "source",
+    "schema_org", "figure_component", "media",
+    "media_link", "caption", "caption_inner",
+    "download_component", "download_link",
+    "download_link_attributes", "download_link_inner",
+    "file_previews", "file_preview", "content",
+    "headline_component", "headline_attributes",
+    "headline_inner", "wrapper", "wrapper_tag",
+    "attributes", "inner", "metadata", "style",
+    "script"
+
+  Example:
+  #}
+  
+  {% block download_component %}
+
+    {% set download_link_attributes = attrs(download.link_attributes|default)
+      .set('data-type', download.file.extension(''))
+    %}
+     {{ parent() }}
+
+  {% endblock %}
+
+

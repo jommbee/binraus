@@ -1,0 +1,86 @@
+// Layout Suchseite
+
+.mod_search {
+	margin: 1rem 0;
+
+	.formbody {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: stretch;
+		max-width: 30rem;
+		margin: 0 auto 2rem auto;
+
+		.widget-text {
+			flex: 1;
+
+			label {
+				@include invisibleAccessible;
+			}
+
+			input {
+				height: 40px;
+				padding: .5em;
+				border: 1px solid var(--grau-300);
+				border-radius: 5px 0 0 5px;
+				background-color: var(--grau-100);
+				color: var(--grau-900);
+				width: 100%;
+			}
+		}
+
+		.widget-submit {
+			flex: 0 0 auto;
+
+			button {
+				height: 40px;
+				width: auto;
+				background: var(--grau-400);
+				border: none;
+				border-radius: 0 5px 5px 0;
+				color: var(--grau-900);
+				transition: all .2s linear;
+
+				&:hover,
+				&:focus {
+					background-color: var(--grau-800);
+					color: var(--grau-100);
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.header {
+		margin-bottom: 2rem;
+	}
+
+	> div {
+		margin-bottom: 2rem;
+	}
+
+	h3 {
+		font-family: var(--font-family-default);
+		font-weight: var(--fw-sb);
+		margin-bottom: .25em;
+		color: var(--grau-700);
+	}
+
+	.relevance, .url {
+		font-size: .75rem;
+		color: var(--grau-600);
+		font-weight: normal;
+	}
+
+	.context {
+		margin-bottom: .25em;
+	}
+
+	.highlight {
+		background-color: var(--grau-200);
+		padding: 0 .2em;
+	}
+
+	.url {
+		color: var(--grau-600);
+	}
+}

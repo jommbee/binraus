@@ -1,0 +1,87 @@
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+@mixin visible {
+	display: block;
+	visibility: visible;
+}
+
+.invisible {
+	border: 0 none;
+	clip: rect(0px, 0px, 0px, 0px);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+// Content only visible for screenreaders
+@mixin invisibleAccessible {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden !important;
+}
+
+.invisibleAccessible,
+.sr-only {
+	@include invisibleAccessible;
+}
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+// Flex-Container
+.flexit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+// Zentrieren
+.center {
+	&-text {
+		text-align: center;
+	}
+
+	&-block {
+		margin-inline: auto;
+	}
+
+	&-all {
+		text-align: center;
+		margin-inline: auto;
+	}
+}
+
+.listreset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}

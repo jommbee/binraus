@@ -1,0 +1,47 @@
+img, picture {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	font-style: italic;
+	// shape-margin: 1rem;
+	// background-repeat: no-repeat;
+	// bAckground-size: cover;
+}
+
+figure {
+	line-height: 0;
+	margin: 0;
+	display: block;
+}
+
+figcaption {
+	line-height: 1.2;
+}
+
+figure img {
+	display: block;
+}
+
+figcaption {
+	display: inline-block;
+	caption-side: bottom;
+	font-style: italic;
+	padding: .375rem 0;
+	font-size: .875rem;
+	color: var(--grau-500);
+}
+
+/*Alle Bilder ohne Alt-Attribut kennzeichen*/ 
+/*sollte für Production auskommentiert werden!*/
+// img:not([alt]),
+// img[alt=""] {
+// 	border: 5px dashed #c00;
+// }
+
+/*Behebt Probleme mit responsiven Bildern
+//https://community.contao.org/de/showthread.php?81074-Problem-mit-Bildgr%C3%B6%C3%9Fen-bei-responsive-Ausgabe-(seit-Kurzem)&p=545407&viewfull=1#post545407
+*/
+:where(source[width][height] ~ img) { 
+    width: auto;
+    height: auto;
+}

@@ -1,0 +1,16 @@
+[class^="icon"] {
+	height: 1.6rem;
+	width: 1.6rem;
+	display: inline-block;
+	margin-right: .125rem;
+	transform: translateY(.45rem);
+	color: var(--grau-700);
+
+	#footer & {
+		color: #fff;
+	}
+
+	& + span {
+		@include invisibleAccessible;
+	}
+}

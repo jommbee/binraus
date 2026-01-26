@@ -1,0 +1,37 @@
+.mod_article {
+	padding: var(--space-default) 1rem var(--space-default) 1rem;
+	background-color: #ffffff05;
+
+	@media screen and (min-width: #{$bp-m}px) {
+		--space-default: var(--space-large);
+	}
+
+	@media screen and (min-width: #{$bp-wrapbox}px) {
+		--space-default: var(--space-large);
+		padding-inline: 0;
+	}
+
+	.wrap-article {
+		@extend .wrap;
+		position: relative;
+		padding-inline: 0;
+	}
+
+	&.nopadding {
+		padding: 0;
+	}
+
+	&.full-width {
+		.wrap-article {
+			width: 100%;
+			max-width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	&.userarea {
+		text-align: center;
+		color: #fff;
+	}
+}

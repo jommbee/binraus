@@ -1,0 +1,44 @@
+//*********************
+// COLORS
+//*********************
+
+//Kundenfarbpalette
+
+//Kundenfarbpalette
+html {
+--brand-color1:				#6c9143;
+--brand-color2:				#ce8c55;
+--brand-color3:				#894994;
+--brand-black:		    	#1d1d1a;
+
+//Schattierungen farbe
+
+
+//Schattierungen Grau
+--grau-100:					#F2F2F3;
+--grau-200:					#E5E5E6;
+--grau-300:					#D7D9DA;
+--grau-400:					#BDBFC2;
+--grau-500:					#95999D;
+--grau-600:					#74787C;
+--grau-700:					#56595C;
+--grau-800:					#3D4042;
+--grau-900:					var(--brand-black);
+
+// Zuweisung der Rollenvariablen
+--base-color:				#fff;
+--text-color:				var(--grau-200);
+--text-color-light:         #fff;
+--heading-color:			var(--brand-color1);
+--secondary-heading-color:	var(--brand-color2);
+
+// Links
+--action:					var(--brand-color1);
+--action-respond:			var(--brand-color3);
+
+// Alerts, errors and UI interface
+--alert-yellow:				#ff0;
+--alert-blue:				#00f;
+--alert-red:				#f00;
+--alert-green:				#0f0;
+}

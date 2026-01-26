@@ -1,0 +1,134 @@
+//*********************
+// CLEARFIXIN'
+//*********************
+// Example: @include clearfix;
+// Contain floats: nicolasgallagher.com/micro-clearfix-hack/
+//*********************
+.clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear:both;
+	}
+}
+
+@mixin clearfix {
+	&:after {
+		content:"";
+		display:table;
+		clear:both;
+	}
+}
+
+// Vendor Prefixes
+// --------------
+@mixin prefixer($property, $value, $prefixes) {
+	@each $prefix in $prefixes {
+	  $prefix-map: (
+		webkit: $prefix-for-webkit,
+		moz: $prefix-for-mozilla,
+		ms: $prefix-for-microsoft,
+		o: $prefix-for-opera,
+		spec: $prefix-for-spec
+	  );
+	  
+	  @if map-has-key($prefix-map, $prefix) {
+		@if map-get($prefix-map, $prefix) {
+		  $vendor-prefix: if($prefix == 'spec', '', '-#{$prefix}-');
+		  #{$vendor-prefix}#{$property}: $value;
+		}
+	  } @else {
+		@warn "Unrecognized prefix: #{$prefix}";
+	  }
+	}
+  }
+
+//*********************
+// BREAKPOINTS
+//*********************
+// standard (1 parameter) -> min-width
+// optional parameter for max-width ('max') or min-max-width (2nd size):
+//
+// @include breakpoint(400)				==> min-width(25em)   // 400px / 16px
+// @include breakpoint(400, max)		==> max-width(25em)
+// @include breakpoint(400, 600)		==> min-width(25em) and max-width(37.5em)
+//*********************
+@mixin breakpoint($point1, $point2:0) {
+	@if ($point2 == 0) {
+		@media screen and (min-width: $point1 + px) {
+			@content;
+		}
+	}
+	@else if ($point2 == max) {
+		@media screen and (max-width: $point1 + px) {
+			@content;
+		}
+	}
+	@else {
+		@media screen and (min-width: $point1 + px) and (max-width: $point2 + px) {
+			@content;
+		}
+	}
+}
+
+// Typography
+// ---------
+@mixin font-size($size) {
+	font-size: #{$size}px;
+	font-size: #{$size / 16}rem;
+}
+  
+@mixin font-size-fluid($min-size, $max-size, $min-viewport: 320, $max-viewport: 1200) {
+	$size-diff: $max-size - $min-size;
+	$viewport-diff: $max-viewport - $min-viewport;
+	
+	font-size: clamp(
+	  #{$min-size}px,
+	  calc(#{$min-size}px + #{$size-diff} * ((100vw - #{$min-viewport}px) / #{$viewport-diff})),
+	  #{$max-size}px
+	);
+  }
+
+//*********************
+// BOX SIZING
+//*********************
+// NOTE: value of "padding-box" is only supported in Gecko. So
+// probably best not to use it.
+// Usage: @include box-sizing(border-box);
+//*********************
+
+@mixin box-sizing($type: border-box) {
+	@include prefixer(box-sizing, $type, webkit moz ms spec);
+}
+
+// Colors
+// ------
+@mixin rgba($color, $opacity) {
+	$rgba-color: rgba($color, $opacity);
+	background-color: $color; // Fallback
+	background-color: $rgba-color;
+  }
+
+//*********************
+// OVERFLOW ELLIPSIS
+//*********************
+// Usage: @include ellipsis();
+//*********************
+
+@mixin ellipsis() {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+//*********************
+// WORD WRAPPING
+//*********************
+// Usage: @include wordwrap();
+//*********************
+
+@mixin wordwrap() {
+	word-break: break-all;
+	word-break: break-word;
+	hyphens: auto;
+}

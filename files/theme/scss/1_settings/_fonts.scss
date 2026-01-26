@@ -1,0 +1,31 @@
+
+@font-face{font-display:swap;font-family:"Advent Pro";font-style:normal;font-weight:100;src:url("/files/theme/fonts/advent-pro-v33-latin-100.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:italic;font-weight:100;src:url("/files/theme/fonts/advent-pro-v33-latin-100italic.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:normal;font-weight:200;src:url("/files/theme/fonts/advent-pro-v33-latin-200.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:italic;font-weight:200;src:url("/files/theme/fonts/advent-pro-v33-latin-200italic.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:normal;font-weight:300;src:url("/files/theme/fonts/advent-pro-v33-latin-300.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:italic;font-weight:300;src:url("/files/theme/fonts/advent-pro-v33-latin-300italic.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:normal;font-weight:400;src:url("/files/theme/fonts/advent-pro-v33-latin-regular.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:italic;font-weight:400;src:url("/files/theme/fonts/advent-pro-v33-latin-italic.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:normal;font-weight:500;src:url("/files/theme/fonts/advent-pro-v33-latin-500.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:italic;font-weight:500;src:url("/files/theme/fonts/advent-pro-v33-latin-500italic.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:normal;font-weight:600;src:url("/files/theme/fonts/advent-pro-v33-latin-600.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:italic;font-weight:600;src:url("/files/theme/fonts/advent-pro-v33-latin-600italic.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:normal;font-weight:700;src:url("/files/theme/fonts/advent-pro-v33-latin-700.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:italic;font-weight:700;src:url("/files/theme/fonts/advent-pro-v33-latin-700italic.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:normal;font-weight:800;src:url("/files/theme/fonts/advent-pro-v33-latin-800.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:italic;font-weight:800;src:url("/files/theme/fonts/advent-pro-v33-latin-800italic.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:normal;font-weight:900;src:url("/files/theme/fonts/advent-pro-v33-latin-900.woff2") format("woff2")}@font-face{font-display:swap;font-family:"Advent Pro";font-style:italic;font-weight:900;src:url("/files/theme/fonts/advent-pro-v33-latin-900italic.woff2") format("woff2")}
+/** Compiled with Theme Compiler */
+
+//*********************
+// Fonts size and line height defaults for our calculations
+//*********************
+html {
+    --base-font-size					: 18px;
+    --doc-font-size						: 18;
+}
+
+//*********************
+// Font Stacks
+//*********************
+body {
+--font-family-sans:		"Advent Pro", Arial, "Droid sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+--font-family-serif:	var(--font-family-sans);
+
+--font-family-display:	var(--font-family-sans);
+--font-family-default:	var(--font-family-sans);
+
+// ============
+// Font Weights
+// ============
+
+--fw-l:		300;
+--fw-n:		400;
+--fw-sb:	600;
+--fw-b:		700;
+}

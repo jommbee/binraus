@@ -1,0 +1,29 @@
+@supports (grid-area: auto) {
+
+    [class*="grid_"] {
+        --gapvalue: var(--space-default); 
+        grid-column-gap: var(--gapvalue);
+        grid-row-gap: var(--gapvalue);
+    }
+
+
+    // @media screen and (min-width: #{$bp-l}px) {
+    //     [class*="grid_"] {
+    //        --gapvalue: 2rem; 
+    //     }
+    // }
+
+    // @media screen and (min-width: #{$bp-wrapbox}px) { {
+    //     [class*="grid_"] {
+    //        --gapvalue: 3rem; 
+    //     }
+    // }
+
+    .grid-gap-null {
+        --gapvalue: 0;
+    }
+
+    .grid-item-padding {
+        padding: calc(clamp(1rem, 2.712vw + 0.322rem, 2rem));
+    }
+}

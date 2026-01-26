@@ -1,0 +1,73 @@
+table {
+ // Border
+--table-border-width: 1px;
+--table-border-style: solid;
+--table-border-color: var(--grau-300);
+// Colors
+--table-color: var(--brand-black);
+--table-even-background: var(--grau-200);
+--table-odd-background: none;
+// Inner Spacing
+--table-cell-padding: .5rem;
+--table-th-padding: 1.5rem var(--table-cell-padding) 1rem var(--table-cell-padding);
+// Actions
+--table-row-action-respond-background: #c7c7c7;
+// Header
+--table-caption-color: rgb(61, 61, 61);
+--table-th-background: rgb(209, 179, 79);
+--table-th-color: rgb(255, 255, 255);
+// Body
+--table-th-body-background: rgb(186, 173, 129);
+// Footer
+--table-tfoot-fontsize: .7rem;
+}
+
+// Basic Styles
+table {
+    caption {
+        color: var(--table-caption-color);
+    }
+
+    td, th {
+        border: var(--table-border-width) var(--table-border-style) var(--table-border-color);
+        padding: var(--table-cell-padding);
+    }
+
+    tr:nth-child(even){
+        background-color: var(--table-even-background);
+    }
+
+    tr:nth-child(odd){
+        background-color: var(--table-odd-background);
+    }
+
+    tr:hover {
+        background-color: var(--table-row-action-respond-background);
+    }
+
+    th {
+        padding: var(--table-th-padding);
+        text-align: left;
+        background-color: var(--table-th-background);
+        color: var(--table-th-color);
+    }
+    
+    tbody {
+        th {
+            background-color: var(--table-th-body-background);
+        }
+    }
+
+    tfoot {
+        td, th {
+            font-size: var(--table-tfoot-fontsize);
+        }
+    }
+
+}
+
+// Set responsiv container
+.content-table,
+.content-text:has(table) {
+    overflow-x:auto;
+}

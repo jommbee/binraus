@@ -1,0 +1,114 @@
+.content-download ,
+.content-downloads {
+	// Default Icon Color (search and replace)
+	// fill='%2332a852'
+	--download-color: var(--brand-black);
+	--download-background: var(--grau-100);
+	--download-border-weight: 1px;
+	--download-border-style: solid;
+	--download-border-color: var(--brand-color1);
+	--download-border-radius: 10px;
+	
+	--download-action-color: #ffffff;
+	--download-action-background: var(--grau-700);
+	--download-action-border-color:  var(--brand-color1);
+}
+	
+.content-download  {
+	display: inline-block;
+
+	&:not(:has(figure)) a {
+		display: block;
+		padding: .5em .5em .5em 2.5rem;
+		color: var(--download-color);
+		background-color: var(--download-background);
+		border: var(--download-border-weight) var(--download-border-style) var(--download-border-color);
+		border-radius: var(--download-border-radius);
+		background-repeat: no-repeat;
+		background-position: left .25rem center;
+		background-size: 1.5rem;
+		text-decoration: none;
+		transition: all .3s;
+
+		&:hover,
+		&:focus {
+			border-color: var(--download-action-border-color);
+			background-color: var(--download-action-background);
+			color: var(--download-action-color);
+		}
+	}
+
+	/* Display the extension as file*/
+	// For this image-less version you have to add [data-type="<?= $this->extension ?>"] to a tag inside custom/content-download 
+	&.download-element {
+		a {
+			padding: .5rem;
+		}
+	
+		a:before {
+			content: attr(data-type);
+			display: inline-block;
+			vertical-align: middle;
+			height: 1.5rem;
+			width: 1.2rem;
+			font-size: 8px;
+			line-height: 240%;
+			text-align: center;
+			border: 1px solid var(--download-border-color);
+			border-radius: 5px 2px 2px 2px;
+			padding: .2rem;
+			margin-right: .3rem;
+		}
+
+		&:has(figure) {
+			border: var(--download-border-weight) var(--download-border-style) var(--download-border-color);
+			border-radius: var(--download-border-radius);
+			overflow: hidden;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			background: var(--download-background);
+
+			h1,h2,h3,h4,h5,h6 {
+				flex: 0 0 100%;
+				margin: 0;
+				text-align: center;
+				background: var(--grau-200);
+				font-size: 1rem;
+				padding: .2rem;
+			}
+
+		}
+	}
+}
+
+.content-downloads {
+
+	ul {
+		@extend .listreset;
+		background-color: var(--grau-200);
+		border: var(--download-border-weight) var(--download-border-style) var(--download-border-color);
+		border-radius: var(--download-border-radius);
+		padding: 1rem;
+		display: inline-block;
+	}
+
+	li {
+		padding: .3rem .6rem .3rem 1.3rem;
+		background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiM4ODg4ODgiIGQ9Ik0xOSA5aC00VjNIOXY2SDVsNyA3bDctN3pNNSAxOHYyaDE0di0ySDV6Ii8+PC9zdmc+) left .3rem top .7em no-repeat;
+		margin-bottom: 1px;
+		background-color: var(--grau-100);
+		transition: background-color .4s;
+		
+		&:hover,&:focus-within {
+			background-color: var(--grau-300);
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		color: var(--download-color);
+	}
+}

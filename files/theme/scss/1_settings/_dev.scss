@@ -1,0 +1,11 @@
+
+// dump Ausgabe sauber halten
+.sf-dump a {
+	border: none !important;
+	text-decoration: none !important;
+	background: none !important;
+	&:before,
+	&:after {
+		content: none !important;
+	}
+}

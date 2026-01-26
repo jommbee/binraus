@@ -1,0 +1,3 @@
+<?php
+	$GLOBALS['TL_JAVASCRIPT'][] = $GLOBALS['TL_CONFIG']['uploadPath'].'/theme/js/main.min.js|static';
+?>
