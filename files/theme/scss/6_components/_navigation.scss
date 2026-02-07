@@ -25,14 +25,15 @@ nav,
 .mainnav {
 	--link-space-inner-v: 0.2rem;
 	--link-space-inner-h: 1rem;
-	--bg-nav: #fff;
+	--bg-nav: #ffffff24;
 
 	ul {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;
 		align-items: center;
-		background: var(--bg-nav);
+		gap: .5rem
+
 
 		ul {
 			display: none;
@@ -43,11 +44,21 @@ nav,
 
 	li {
 		flex: 0 0 auto;
+		align-content: center;
 	}
 
-	a {
-		padding: var(--link-space-inner-v) var(--link-space-inner-h);
-	}
+a {
+	display: flex;
+	align-items: center;      /* vertikal */
+	justify-content: center;  /* horizontal */
+
+	padding: var(--link-space-inner-v) var(--link-space-inner-h);
+	background: var(--bg-nav);
+	width: 100px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	text-align: center;
+}
 
 	ul {
 		> li {

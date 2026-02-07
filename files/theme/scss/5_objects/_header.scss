@@ -5,6 +5,8 @@
 
 	.inside {
 		@extend .wrap;
+		display: flex;
+		justify-content: space-between;
 	}
 
 	* {

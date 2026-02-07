@@ -1013,6 +1013,14 @@ body {
   color: var(--grau-900);
   padding: var(--space-small);
 }
+#header .inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 #header * {
   margin: 0;
 }
@@ -1254,7 +1262,7 @@ nav a:hover, nav a:focus,
 .mainnav {
   --link-space-inner-v: 0.2rem;
   --link-space-inner-h: 1rem;
-  --bg-nav: #fff;
+  --bg-nav: #ffffff24;
 }
 .mainnav ul {
   display: -webkit-box;
@@ -1268,20 +1276,34 @@ nav a:hover, nav a:focus,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: var(--bg-nav);
-}
-.mainnav ul ul {
-  display: none;
-  position: absolute;
-  z-index: 5;
+  gap: 0.5rem ul;
+  gap-display: none;
+  gap-position: absolute;
+  gap-z-index: 5;
 }
 .mainnav li {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .mainnav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* vertikal */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* horizontal */
   padding: var(--link-space-inner-v) var(--link-space-inner-h);
+  background: var(--bg-nav);
+  width: 100px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  text-align: center;
 }
 .mainnav ul > li:hover > ul, .mainnav ul > li:focus > ul {
   display: block;
@@ -1852,4 +1874,8 @@ blockquote p {
   height: 25px;
   background: var(--color-rangeslider);
   cursor: pointer;
+}
+
+.login_info {
+  font-size: 0.8rem;
 }
