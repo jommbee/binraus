@@ -1,3 +1,26 @@
-.login_info {
-    font-size: .8rem;
+
+
+.content-login {
+
+    .formbody {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+
+    .login_info {
+        font-size: .8rem;
+    }
+
+
+
+    &.ce_form {
+
+        .widget-submit {
+    .submit {
+        padding: .3rem;
+        border-radius: .3rem;
+    }
+        }
+    }
 }

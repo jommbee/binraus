@@ -26,6 +26,9 @@ nav,
 	--link-space-inner-v: 0.2rem;
 	--link-space-inner-h: 1rem;
 	--bg-nav: #ffffff24;
+	--color-nav: var(--brand-color1);
+	--rim-color: rgba(255, 255, 255, 0.267);
+	--spoke-color: var(--rim-color);
 
 	ul {
 		display: flex;
@@ -33,13 +36,6 @@ nav,
 		justify-content: flex-start;
 		align-items: center;
 		gap: .5rem
-
-
-		ul {
-			display: none;
-			position: absolute;
-			z-index: 5;
-		}
 	}
 
 	li {
@@ -48,17 +44,60 @@ nav,
 	}
 
 a {
+	// position: relative;
 	display: flex;
-	align-items: center;      /* vertikal */
-	justify-content: center;  /* horizontal */
+	align-items: center;
+	justify-content: center;
 
-	padding: var(--link-space-inner-v) var(--link-space-inner-h);
-	background: var(--bg-nav);
 	width: 100px;
 	aspect-ratio: 1;
 	border-radius: 50%;
+
+	background: transparent;
+	color: var(--color-nav);
+	text-decoration: none;
+	font-weight: 600;
 	text-align: center;
+
+	overflow: hidden;
+
+	/* FELGE + SPEICHEN */
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: 50%;
+
+		border: 3px solid var(--rim-color);
+
+		background:
+			repeating-conic-gradient(
+				from 0deg,
+				var(--spoke-color) 0deg 1.5deg,
+				transparent 1.5deg 30deg
+			);
+
+		transition: transform 0.6s ease;
+	}
+
+	/* NABE */
+	&::after {
+		content: "";
+		position: absolute;
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+		background: var(--rim-color);
+	}
+
+	/* HOVER */
+	&:hover::before {
+		transform: rotate(45deg);
+	}
 }
+
+
+
 
 	ul {
 		> li {

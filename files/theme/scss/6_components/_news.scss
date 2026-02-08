@@ -1,0 +1,41 @@
+.mod_newsreader {
+    .layout_full {
+        max-width: 90ch;
+        margin: 0 auto;
+
+        h1 {
+            margin-bottom: 0;
+        }
+    }
+}
+
+p.info {
+    font-size: .875rem;
+    color: var(--grau-900);
+    margin-top: .5rem;
+    text-align: right;
+    margin-bottom: 0;
+}
+
+.mod_newslist {
+    .layout_latest {
+        margin-bottom: var(--space-large);
+        background-color: #ffffff05;
+        padding: var(--space-content);
+        border-radius: 8px;
+        figure {
+            text-align: center;
+            a {
+                overflow: hidden;
+                border-radius: 50%;
+                display: inline-flex;
+                place-content: center;;
+            }
+        }
+
+        .more {
+            margin: 0;
+            text-align: right;
+        }
+    }
+}
